@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="icon" href="../assest/Home_Imges/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Animal Central Zoo</title>
+<!-- Link Section-------------------------------------- -->
+
+    <!-- Bootstrap CDN CSS--------------------------------------------------- -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap CDN JS--->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Bootstrap CDN End-------------------------------------------------- -->
+
+    <!-- CSS LINK--------------------------------------------------------- -->
+    <link href="../style.css" rel="stylesheet">
+    <link href="ANStyle.css" rel="stylesheet">
+    <!-- CSS LINK--------------------------------------------------------- -->
+
+<!-- Swiper CDN________ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- animate.css CDN________ -->    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<!--AoS Animation CDN________-->  
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  
+
+<!-- AOS Animate -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- Link Section-------------------------------------- -->    
+</head>
+  <body>
+
+
+<!-- Navbar Section --------------------------------------------------------- -->
+<section class="navebar-section">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top mt-3 mx-5 px-4">
+      <div class="container-fluid">
+        <!-- logo_________________ -->
+        <a class="navbar-brand" href="#"><img src="../assest/Home_Imges/zlogo1.png" class="navbar-brand" alt=""></a>
+        
+        <!-- TOGGLE BTN___________ -->
+        <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- SideBar_____________ -->
+        <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+        <!-- SideBar header_______ -->
+          <div class="offcanvas-header text-white border-bottom">
+            <img src="../assest/Home_Imges/zlogo1.png" class="navbar-brand" alt="">
+            <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <!-- SideBar body_______ -->
+          <div class="offcanvas-body d-flex flex-column flex-lg-row">
+            <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-1">
+              <!-- <li class="nav-item mx-1">
+                <a class="nav-link"href="#">Home</a>
+              </li> -->
+              <li class="nav-item mx-1">
+                <a class="nav-link" href="../WhatWeOffer/What_We_Offer.html">What We Offer</a>
+              </li>
+              
+              <li class="nav-item mx-1">
+                <a class="nav-link" href="../Live_camara/Live_Camara_Page.html">Gallary</a>
+              </li>
+              <li class="nav-item dropdown mx-1">
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../About/About_page.html">About Us</a></li>
+                  <li><a class="dropdown-item" href="../Contact_US/Contect_Page.html">Contect Us</a></li>
+                  <li><a class="dropdown-item" href="../Zoo_map/Zoo_Map_Page.html">Zoo Map</a></li>
+                <li><a class="dropdown-item" href="../Policy/Policy.html">Policy</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown mx-1">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Explore
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="Animal_Page.html">Animals</a></li>
+                  <li><a class="dropdown-item" href="../Birds/Bird_Pages.html">Birds</a></li>
+                 
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class=" d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+           <a href="#" class="main-btn" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">Book Ticket</a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </nav> 
+  </section>
+
+
+    <!-- Modal form-------------------------------------------------------------->
+    <div class="modal fade" style="background-color: rgba(250, 250, 250, 0.6);" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5 text-center" id="exampleModalLabel">Book An Appointment</h2>  
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div>
+              <div id="liveAlertPlaceholder">
+              </div>
+            </div>
+            <div class="modal-body">
+              <form>
+                  <div class="input-group">
+                    <input type="text" aria-label="Full Name" class="form-control" placeholder="Full Name">
+                  </div>
+                  <div class="input-group mt-3">
+                    <input type="text" aria-label="Full Name" class="form-control" placeholder="CNIC Number">
+                  </div>
+                  
+                  <div class="input-group mt-3">
+                    <input type="text" aria-label="Full Name" class="form-control" placeholder="Contact Number">
+                  </div>
+                  <div class="input-group mb-3 mt-3">
+                    <select class="form-select" id="inputGroupSelect01">
+                      <option value="1">Select Gender</option>
+                      <option value="2">Male</option>
+                      <option value="3">Female</option>
+                      <option value="4">Custom</option>
+                    </select>
+                  </div>
+                  <div class="input-group mb-3 mt-3">
+                    <select class="form-select" id="inputGroupSelect01">
+                      <option value="1">Select Event</option>
+                      <option value="2">Panda Talk</option>
+                      <option value="3">Day Ticket</option>
+                      <option value="4">Night Ticket</option>
+                      <option value="5">Annual Pasess</option>
+                      <option value="6">Tours And Experiance</option>
+                      <option value="7">Animal Experiance</option>
+                    </select>
+                  </div>
+                  <div class="input-group mt-3">
+                    <label class="mt-2">Booking Date</label><br>
+                    <input type="date" aria-label="Full Name" class="form-control text-uppercase" placeholder="Appointment Date">
+                  </div>
+                  <div class="input-group mt-3">
+                    <input type="email" aria-label="Full Name" class="form-control" placeholder="E-mail (123abc@gmail.com)">
+                  </div>
+                  <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Important Note:</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                  </div>
+                </form>
+            </div>
+              <div class="modal-footer">
+                <button type="button" class="btn " data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn " id="liveAlertBtn">Confirm</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    <!-- Modal form-------------------------------------------------------------->
+  
+<!-- Navbar Section --------------------------------------------------------- --> 
+ 
+<!-- section 2 Bannar-------------------------------------------------------- -->
+<section id="home">
+    <div class="ps-0 top-bannar-map">
+      <div class="Container banner-shadow-map" >
+        <div class="row mx-0 banner-text">
+           <div  class="col-lg-5 col-md-12 ms-lg-5 ms-sm-0 animate__animated animate__backInLeft">
+              <h1 class="tophead"style="letter-spacing: -2px; fs-3">Animal</h1><br>
+              <h2 style="color:#ffffff; margin-top: -40px; letter-spacing: -1px;">CENTRAL ZOO</h2>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+</section>
+<!-- section 2 Bannar-------------------------------------------------------- -->
+
+
+<div class="heading  col-lg-12 col-md-12 col-sm-12 text-center mb-5 pt-3" >
+  <h2 style="font-size: 80px; font-family: Candara Light; font-weight: 100;">Meet The Animals</h2>
+  <p style="text-align: center; font-size: 30px;">Explore our exhibits to get close to more than 800 animals and 250 species <br>
+    Including some of the world's most critically endangered</p>
+</div>
+
+<div class="container saprator">
+  <div class="row col-12">
+    <img src="../assest/Seperator.png" alt="">
+  </div>
+</div>
+
+<div class="heading  col-lg-12 col-md-12 col-sm-12 text-center mb-5" style="margin-top:-50px;" >
+  <h2 style="font-size: 50px; font-weight: 600; color:burlywood;">EXPLORE BY EXHIBIT</h2>
+  <h2 style="font-size: 25px; font-family: Leelawadee; font-weight: 550;">Discover the amazing animals and experiences that await you when you explore our award-winning exhibits!</h2>
+  <p style="text-align: center; font-size: 20px;">Central Zoo's 92 acres is divided into bioclimatic zones, featuring different natural habitats ranging from humid tropical rain forests <br> and coastal deserts to temperate rain forests like those of the Pacific Northwest.</p>
+</div>
+
+<!-- Animal Cards_________________________ -->
+<div class="container">
+<div class="row row-cols-1 row-cols-md-4 g-2">
+  <div class="col">
+    <div class="card h-100 animal_card">
+      <img src="../assest/Animal_img/AN1.jpg" class="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bearded Dragon</h5>
+        <p class="card-text">TFreckles is our female bearded dragon. The “beard” is actually a throat pouch covered with long scales. Both males and females communicate by bobbing heads, waving arms and puffing their beards out.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 animal_card">
+      <img src="../assest/Animal_img/AN2.jpg" class="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Jungle Nymphs</h5>
+        <p class="card-text">The giant thorny phasmid, also known as a jungle nymph, is native to Asian tropical rainforests. If you think it looks like a leaf, you’re not wrong. Phasmids use camouflage in the lush foliage around them to blend in and avoid predators. They are harmless to humans and feed entirely on plant material.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 animal_card">
+      <img src="../assest/Animal_img/AN3.jpg  " class="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Madagascar Hissing Cockroach</h5>
+        <p class="card-text">At 3 inches long, these are one of the largest roaches in the world! They live in rotting logs on the island of Madagascar—not in the shadows under the kitchen sink. Calm and wingless, these insects are nature’s recyclers.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 animal_card">
+      <img src="../assest/Animal_img/AN4.jpg" class="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Guinea Pigs</h5>
+        <p class="card-text">All the guinea pigs came from a local guinea pig rescue in Auburn, Washington. They were once unwanted pets, and now they are superstars with a great life at the zoo!.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 animal_card">
+      <img src="../assest/Animal_img/AN5.jpg" class="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Donkey</h5>
+        <p class="card-text">TRico the donkey has gray fur and Sam the donkey is white and brown. Donkeys are one of the smaller members of the horse family. They are intelligent, playful and quick to learn.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 animal_card">
+      <img src="../assest/Animal_img/AN6.jpg" class="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Pot-bellied Pigs</h5>
+        <p class="card-text">These playful pig sisters love spending time with each other and with our keepers who work (and play) with them every day. Their favorite things include snacking on fresh veggies and getting belly scratches.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 animal_card">
+      <img src="../assest/Animal_img/AN7.jpg" class="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Nine-banded Armadillo</h5>
+        <p class="card-text">Amarillo can move fast when he wants to, but he usually takes his time, distracted by his amazing sense of smell. Although he’s small, Amarillo is capable of jumping 2 to 3 feet in the air!</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 animal_card">
+      <img src="../assest/Animal_img/AN8.jpg" class="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Steer</h5>
+        <p class="card-text">Don’t call them cows! Rufous (with reddish brown fur) and Remy (with black fur) are both male steers. They are gentle and curious, and enjoy getting head-rubs and snacks..</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 animal_card">
+      <img src="../assest/Animal_img/AN9.jpg" class="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">CORN SNAKES</h5>
+        <p class="card-text">Their favorite snacks are mice and they enjoy exploring new smells and burying themselves under the mulch and soil in their house. Both of them are pretty calm and easygoing when it comes to handling—although, since they look alike, we hear they like to trick new keepers by impersonating each other!</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 animal_card">
+      <img src="../assest/Animal_img/AN10.jpg" class="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 animal_card">
+      <img src="../assest/Animal_img/Grosser_Panda.JPG" class="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Giant Panda</h5>
+        <p class="card-text">The giant panda (Ailuropoda melanoleuca), also known as the panda bear or simply panda, is a bear species endemic to China.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 animal_card">
+      <img src="../assest/Animal_img/AN12.jpg" class="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Brazilian Black Tarantula</h5>
+        <p class="card-text">Our Brazilian black tarantula is a velvety beauty. Females grow to about 7 inches across, making it easy to see all the details of these gentle, fuzzy spiders.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 animal_card">
+      <img src="../assest/Animal_img/AN13.jpg" class="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">North American Porcupine</h5>
+        <p class="card-text">Skyáana is gentle and confident, determined to do exactly what she wants to do when she wants to do it. She’s a natural climber and will gladly climb for some yam, corn or piece of fruit. Molly is the mother of Skyáana, and used to live in the Northern Trail exhibit.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 animal_card">
+      <img src="../assest/Animal_img/AN14.jpg" class="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">RACCOON</h5>
+        <p class="card-text">Lucy is curious and loves to explore her environment and learn new skills. She enjoys almost any food reward, especially banana chips, raw chicken, grapes and peanut butter.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 animal_card">
+      <img src="../assest/Animal_img/AN15.jpg" class="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Red Panda</h5>
+        <p class="card-text">he red panda (Ailurus fulgens), also known as the lesser panda, is a small mammal native to the eastern Himalayas and southwestern China.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 animal_card">
+      <img src="../assest/Animal_img/AN16.jpg" class="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Sheep</h5>
+        <p class="card-text">Sophia and Loren are very polite girls with rather reserved temperaments. Like many of us, fitness is important to Sophia and Loren; these girls wear FitBarks to keep track of their steps every day! We're sure you'll love these ladies</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 animal_card">
+      <img src="../assest/Animal_img/AN17.jpg" class="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Arctic Fox</h5>
+        <p class="card-text">Hudson is a clever, playful fox. He loves heavy-duty squeaky toys and working with his keepers—especially when they have snacks! Arctic foxes are only white in the winter. Hudson is quickly shedding his perfect white coat and slimming down into a more svelt grayish fox.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 animal_card">
+      <img src="../assest/Animal_img/AN18.jpg" class="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Striped Skunk</h5>
+        <p class="card-text">Harry arrived at Woodland Park Zoo in 2017 and his keepers are still getting to know him and his likes and needs. Stay tuned for more details!</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 animal_card">
+      <img src="../assest/Animal_img/AN19.jpg" class="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">RED FOOTED TORTOISE</h5>
+        <p class="card-text">
+          These 16-year-old brothers, Bolivar and Rivera, are happiest going on long walks in the sunshine, particularly in one of Woodland Park Zoo’s meadows!</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 animal_card">
+      <img src="../assest/Animal_img/AN20.jpg" class="card-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bunnies</h5>
+        <p class="card-text">Winston the rabbit has tortoise-shell fur, with lovely dapples of orangey-brown and black. Keaton, with the gray fur, is our Flemish giant rabbit. His breed is one of the largest in the world—males can weigh 15 to 20 pounds!</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Animal Cards_________________________ -->
+
+
+<div class="container saprator mt-5">
+  <div class="row col-12">
+    <img src="../assest/Seperator.png" alt="">
+  </div>
+</div>
+
+
+
+
+<!-- Careing Section________________________ -->
+<div class="container">
+  <div class="row col-12 mt-5">
+    <h2 style="font-size: 40px; font-weight: 600; color: burlywood; text-align: center;">CARING FOR ANIMALS</h2>
+  <h2 style="font-size: 30px; font-family: Leelawadee; font-weight: 400;">Ensuring Animal Wellness</h2>
+  <p style="text-align: left; font-size: 20px;">Your zoo is accredited by the Association of Zoos & Aquariums and has earned the Humane Certified™ seal from the Pakistan Human Conservation program. Our mission is to save species, and it starts with the wellness of the animals in our care. It’s not only our responsibility—it’s our passion.</p> <br><br>
+  A newborn giraffe, a growing gorilla, and a geriatric penguin all need something different to thrive. Whatever it takes, we’re here to ensure they get it. Husbandry, nutrition, veterinary and exhibit design experts work together to assure individualized care for every animal of every species across their lifespan.
+  </div>
+</div>
+<!-- Careing Section________________________ -->
+
+
+
+
+
+
+ <!-- Footer-------------------------------------------------------------->
+ <section id="footer" >
+  <div class="heading col-lg-12 col-md-12 col-sm-12 text-center mt-3">
+    <h1 style="font-size: 30px; color: darkgreen; margin-bottom: -50px;" >Follow Us</h1>
+    </div>
+    <div class="heading col-lg-12 col-md-12 col-sm-12 text-center mt-3 mb-0">
+      <div class="socialmedia">
+        <a href="#" alt="fblink"> <img src="../assest/Home_Imges/facebook.png" class="smicon" alt="facebook"></a>
+        <a href="#" alt="instalink"><img src="../assest/Home_Imges/tiktok.png" class="smicon" alt="instagram"></a>
+         <a href="#" alt="twitter"></a><img src="../assest/Home_Imges/twitter.png" class="smicon" alt="tiktok"></a>
+         <a href="#" alt="ytlink"></a><img src="../assest/Home_Imges/youtube.png" class="smicon" alt="youtube"></a>
+         <a href="#" alt="twlink"></a><img src="../assest/Home_Imges/instagram.png" class="smicon" alt="twitter"></a>
+       </div>
+      </div>
+    <div class="footer-section wrapper"  style="margin-top: -15px;">
+      <div class="container">
+        <div class="row text-center mt-5">
+          <div class="col-lg-5 col-md-12 mb-lg-0 mb-0">
+            <div class=" border-0" style="background-color: transparent;">
+              <img src="../assest/Home_Imges/zlogo1.png" class="footerlogo" alt="foterlogo">
+            </div>
+          </dIv>
+          <div class="col-lg-7 col-md-12 text-sec ms-0 mt-5">
+              <div class="footer-link">
+              <a class="footerlink" href="../index.html">Home</a>
+              <a class="footerlink" data-bs-toggle="modal" data-bs-target="#Feedback" type="button" href="">Feedback</a>
+              <a class="footerlink" href="../Policy/Policy.html">Policy</a>
+              <a class="footerlink" href="../About/About_page.html">About_Us</a>
+              <a class="footerlink" href="../Contact_US/Contect_Page.html">Contect_Us</a>
+              <a class="footerlink" href="../Live_camara/Live_Camara_Page.html">Live_Camaras</a>
+              <a class="footerlink" href="../Zoo_map/Zoo_Map_Page.html">Zoo_Map</a>
+              <a class="footerlink" href="../Animal/Animal_Page.html">Animals</a>
+              <a class="footerlink" href="../Birds/Bird_Pages.html">Birds</a>
+              <a class="footerlink" href="../WhatWeOffer/What_We_Offer.html">What_We_Offer</a>              
+            </div>
+            <div class="footer-link mt-5">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.3141351305!2d67.14924461169304!3d24.887264277819646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb339999415e0c3%3A0x36742eee0fd9c291!2sAptech%20Metro%20Star%20Gate!5e0!3m2!1sen!2s!4v1717855386075!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>    
+      </div>
+    </div>  
+    <div class="heading col-lg-12 col-md-12 col-sm-12 text-center pb-2 footer-section2">
+      <p style="text-align: center; font-size: 23px; font-size:15px; color: burlywood;">Zoological Society of Karachi is incorporated by Aptech-MSG <br>with Company Number ACP000000. Registered Charity in Pakistan number 000000. Registered address:<br>Shah Faisal Colony Flyover, Faisal Cantonment, Karachi, Karachi City, Sindh, Pakistan</p>
+      </div>
+</section>
+   <!-- Footer-------------------------------------------------------------->
+
+   <!-- Feedback Modal_________________________ -->
+<div class="modal fade" style="background-color: rgba(250, 250, 250, 0.6);" id="Feedback" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background-color:rgb(222, 184, 135, 0.8); box-shadow: 0 2px 6px 0 #6c7d72, 0 2px 8px 0 #ccd7d5; ">
+      <div class="modal-header" style="border: none;">
+        <h2 class="modal-title fs-5 text-center" id="exampleModalLabel">Feedback Or FQA</h2>  
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div>
+        <div id="liveAlertPlaceholder">
+        </div>
+      </div>
+      <div class="modal-body" >
+        <form>
+            <div class="input-group">
+              <input type="text" aria-label="Full Name" class="form-control" placeholder="Full Name" style="background-color: transparent; border-radius: 0%; border-top: none; border-left:none; border-right: none;">
+            </div>
+            <div class="input-group mt-3">
+              <input type="email" aria-label="Full Name" class="form-control" placeholder=" Email:-abc123@gmail.com" style="background-color: transparent; border-radius: 0%; border-top: none; border-left:none; border-right: none;">
+            </div>
+            <div>
+           <p style="font-size: 15px; margin-top: 25px;">Is this first time you have visited the website?</p>
+           <input type="radio" id="yes" name="type" value="Yes">
+           <label for="yes">Yes</label> <br>
+           <input type="radio" id="No" name="type" value="No">
+           <label for="yes">No</label> 
+          </div>
+            <div class="mb-3 mt-3">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text" placeholder="Message Type Heare: " style=" height: 200px; background-color: transparent; border-radius: 0%;  border-left:none; border-right: none; border-bottom: none;"></textarea>
+            </div>
+          </form>
+      </div>
+        <div class="modal-footer">
+          <button type="button" class="btn " data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn " id="liveAlertBtn">Send</button>
+        </div>
+    </div>
+  </div>
+</div>
+  
+
+
+   <script>
+    AOS.init();
+  </script> 
+  <!-- links--------------------------------------------------------------->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assest/JaveScript_File/Swiper.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- links--------------------------------------------------------------->
+    
+  
+    </body>
+  </html>

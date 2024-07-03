@@ -1,14 +1,590 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="icon" href="../assest/Home_Imges/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Central Zoo Home</title>
 
-    <h1>Hello Duniya</h1>
-    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione possimus illum vero enim ex totam odio facere cumque, quas vel iste laborum ut culpa, quasi eligendi quod, pariatur id ullam!</P>
+    <!-- Link Section-------------------------------------- -->
+
+    <!-- Bootstrap CDN CSS--------------------------------------------------- -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap CDN JS--->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Bootstrap CDN End-------------------------------------------------- -->
+
+    <!-- CSS LINK--------------------------------------------------------- -->
+    <link href="style.css" rel="stylesheet">
+    <!-- CSS LINK--------------------------------------------------------- -->
+
+    <!-- Swiper CDN________ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="assest/JaveScript_File/Swiper.js"></script>
+
+    <!-- animate.css CDN________ -->    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- font awsone____________________ -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+   
+    <!-- Link Section-------------------------------------- -->    
+</head>
+  <body>
     
-</body>
+<!-- Navbar Section --------------------------------------------------------- -->
+ <section class="navebar-section">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top mt-3 mx-5 px-4">
+      <div class="container-fluid">
+        <!-- logo_________________ -->
+        <a class="navbar-brand" href="index.html"><img src="assest/Home_Imges/zlogo1.png" class="navbar-brand" alt=""></a>
+        
+        <!-- TOGGLE BTN___________ -->
+        <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- SideBar_____________ -->
+        <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+        <!-- SideBar header_______ -->
+          <div class="offcanvas-header text-white border-bottom">
+            <img src="assest/Home_Imges/zlogo1.png" class="navbar-brand" alt="">
+            <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <!-- SideBar body_______ -->
+          <div class="offcanvas-body d-flex flex-column flex-lg-row">
+            <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-1">
+              <li class="nav-item mx-1">
+                <a class="nav-link active" href="index.html">Home</a>
+              </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link" href="WhatWeOffer/What_We_Offer.html">What We Offer</a>
+              </li>
+              
+              <li class="nav-item mx-1">
+                <a class="nav-link" href="Live_camara/Live_Camara_Page.html">Gallary</a>
+              </li>
+              <li class="nav-item dropdown mx-1">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="About/About_page.html">About Us</a></li>
+                  <li><a class="dropdown-item" href="Contact_US/Contect_Page.html">Contect Us</a></li>
+                  <li><a class="dropdown-item" href="Zoo_map/Zoo_Map_Page.html">Zoo Map</a></li>
+                  <li><a class="dropdown-item" href="Policy/Policy.html">Policy</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown mx-1">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Explore
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="Animal/Animal_Page.html">Animals</a></li>
+                  <li><a class="dropdown-item" href="Birds/Bird_Pages.html">Birds</a></li>
+                
+                </ul>
+              </li>
+            </ul>
+            <div class=" d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+           <a  href="" class="main-btn" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">Book Ticket</a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </nav> 
+  </section>
+<!-- Navbar Section --------------------------------------------------------- --> 
+
+
+<!-- Modal form-------------------------------------------------------------->
+    <div class="modal fade" style="background-color: rgba(250, 250, 250, 0.6);" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5 text-center" id="exampleModalLabel">Book An Appointment</h2>  
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div>
+            <div id="liveAlertPlaceholder">
+            </div>
+          </div>
+          <div class="modal-body">
+            <form>
+                <div class="input-group">
+                  <input type="text" aria-label="Full Name" class="form-control" placeholder="Full Name">
+                </div>
+                <div class="input-group mt-3">
+                  <input type="text" aria-label="Full Name" class="form-control" placeholder="CNIC Number">
+                </div>
+                
+                <div class="input-group mt-3">
+                  <input type="text" aria-label="Full Name" class="form-control" placeholder="Contact Number">
+                </div>
+                <div class="input-group mb-3 mt-3">
+                  <select class="form-select" id="inputGroupSelect01">
+                    <option value="1">Select Gender</option>
+                    <option value="2">Male</option>
+                    <option value="3">Female</option>
+                    <option value="4">Custom</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3 mt-3">
+                  <select class="form-select" id="inputGroupSelect01">
+                    <option value="1">Select Event</option>
+                    <option value="2">Panda Talk</option>
+                    <option value="3">Day Ticket</option>
+                    <option value="4">Night Ticket</option>
+                    <option value="5">Annual Pasess</option>
+                    <option value="6">Tours And Experiance</option>
+                    <option value="7">Animal Experiance</option>
+                  </select>
+                </div>
+                <div class="input-group mt-3">
+                  <label class="mt-2">Booking Date</label><br>
+                  <input type="date" aria-label="Full Name" class="form-control text-uppercase" placeholder="Appointment Date">
+                </div>
+                <div class="input-group mt-3">
+                  <input type="email" aria-label="Full Name" class="form-control" placeholder="E-mail (123abc@gmail.com)">
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Important Note:</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+          </div>
+            <div class="modal-footer">
+              <button type="button" class="btn " data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn " id="liveAlertBtn">Confirm</button>
+            </div>
+        </div>
+      </div>
+    </div>
+<!-- Modal form-------------------------------------------------------------->
+      
+
+
+<!-- section 2 Bannar-------------------------------------------------------- -->
+<section id="home">
+    <div class="ps-0 top-bannar">
+      <div class="Container banner-shadow">
+        <div class="row mx-0 banner-text">
+        <div  class="col-lg-5 col-md-12 ms-lg-5 ms-sm-0 animate__animated animate__backInLeft">
+          <h1 class="tophead">WELCOME TO CENTRAL ZOO</h1><br>
+          <h2>CONSERVATION
+          IN ACTION</h2>
+           <p>Central Zoo is creating the unforgettable memories this summer at the Columbus Zoo, where thousands of animals, thrilling rides, exciting events and FUN await—all while supporting wildlife conservation.</p>
+            <div class="mt-4 ms-lg-0 ">
+              <a class="btn ms-lg-3" href="About/About_page.html">Learn more</a>
+              <a class="btn btn1 ms-lg-3" href="Contact_US/Contect_Page.html">Start Your Adventure</a>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+</section>
+<!-- section 2 Bannar-------------------------------------------------------- -->
+
+
+<!--section 3 Visit Zoo-------------------------------------------------------- -->
+<center>
+<section id="visit">
+    <div class="counter-section">
+      <h1 style="margin-bottom:30px; letter-spacing: 0.5px; text-align:center; color: #DEE4E3;">Visit The Zoo</h1>
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-lg-0 mb-md-0 ps-5" style="border-right: 1px solid green; display: flex; flex-direction: column; ">
+
+          <p style="text-align: left; font-size: 23px; padding-bottom:30px; padding-top: 10px; font-size: 15px; color:#DEE4E3; ">OPENING HOURS </p>
+          <p style=" text-align: left; font-size: 20px;">Monday - Sunday</p>
+            <h2 style=" text-align: left; font-size: 30px;">09:00 till Sunset</h2>
+            <p style="font-size:15px; color:#DEE4E3; ">Last admission 17:00 </p>
+            <a class="main-btn" style="width:200px;" href="Contact_US/Contect_Page.html">Opening Hours</a>
+          
+          </div>
+
+           <div class="col-md-3 col-lg-0 mb-md-0 ps-5" style="border-right: 1px solid green; display: flex; flex-direction: column; ">
+            <p style="text-align: left; font-size: 23px; padding-bottom:15px; padding-top: 10px; font-size: 15px; color:#DEE4E3; ">CONTECT DETAILS</p>
+            <h2 style="text-align: left; font-size: 20px;"><i class="fas fa-phone" style="margin-right: 10px;"></i>+92 317 1350180</h2>
+            <h2 style="text-align: left; font-size: 20px;"><i class="fas fa-envelope-open-text" style="margin-right: 10px;"></i>centra.zoo@gmail.com</h2>
+            <p style="text-align: left; font-size: 23px; font-size:15px; color:#DEE4E3;"><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i>Shah Faisal Colony Flyover, Faisal<br> Cantonment, Karachi, Karachi City, <br> Sindh, Pakistan</p>
+            <a  class="main-btn" style=" width:200px;" href="Contact_US/Contect_Page.html">Contect Us</a>
+          </div>
+
+          <div class="col-md-3 col-lg-0 mb-md-0" style="border-right: 1px solid green; display: flex; flex-direction: column;padding-left: 60PX;">
+            <p style="text-align: left; font-size: 23px; padding-bottom:0px; padding-top: 10px; font-size: 15px; color:#DEE4E3; ">MAP</p>
+           <img  src="assest/Home_Imges/zoo_map.png"  style="height: 160px; width: 170px; " alt="">
+            <a class="main-btn" href="Zoo_map/Zoo_Map_Page.html" style=" width:200px;">Zoo Map</a>
+          </div>
+
+          <div class="col-md-3 col-lg-0 mb-md-0" style=" display: flex; flex-direction: column; padding-left: 60PX;">
+            <p style="text-align: left; font-size: 23px; padding-bottom:0px; padding-top: 10px; font-size: 15px; color:#DEE4E3; ">REVIEWS</p>
+           <img  src="assest/Home_Imges/FAQ.png"  style="height: 160px; width: 170px; " alt="">
+            <a class="main-btn" data-bs-toggle="modal" data-bs-target="#Feedback" type="button" href="" style=" width:200px;">Feedback</a>
+          </div>
+       
+          
+        
+        </div>
+      </div>
+    </div>
+  </section>
+</center> 
+<!--section 3 Counter-------------------------------------------------------- -->
+
+
+<!--section About----------------------------------------------------------------->
+<section id="About" >
+  <div class="About-section wrapper">
+    <div class="container">
+      <div class="row align-items-center justify-content-center mt-2">
+        <div class="col-lg-6 col-md-12 mb-lg-0 mb-2">
+          <div class=" border-0" style="background-color: transparent;">
+            <img src="assest/Home_Imges/Aboutimage.png" class="img-fluid " alt="">
+          </div>
+        </dIv>
+        <div class="col-lg-6 col-md-12 text-sec ms-0">
+            <h2 style="font-size: 50px;">Central Zoo is a unique conservation in the heart of Pakistan capital cities</h2>
+            <p>We're part of wildlife conservation charity, working to restore wildlife in the Karachi and around the Pakistan. We bring people closer to nature and use our expertise to protect wildlife today, while inspiring a lifelong love of animals in the conservationists of tomorrow.</p>
+            <a class="btn mt-4" href="About/About_page.html" >learn more</a>
+        </div>
+    </div>
+  </div>  
+</section>
+<div class="heading about2 col-lg-12 col-md-12 col-sm-12 text-center mb-5 pt-3 pb-3" >
+  <h2 style="font-size: 50px;">Central Zoo Park</h2>
+  <p style="text-align: center;">Central Zoo is in a class of its own! Not only is it the oldest and most frequently visited zoo in the country,<br> it is also home to the largest variety of species of any zoo in the world <br> including the only giant pandas in Pakistan</p>
+</div>
+<!--section About----------------------------------------------------------------->
+
+
+<!--Coversation section---------------------------------------------------------->
+<center>
+<div class="conversation col-sm-12 mt-5 mb-5">
+  <div class="con-body ms-lg-5 ms-3 me-5 text-center" > 
+    <h1 style="text-align:center;font-size: 60px;">Conservation<br>Worldwide</h1>
+    <p style="color:aliceblue; text-align:center;">This map highlights where we focus our conservation work to support <br> wildlife, communities, and ecosystems around the world.</p>
+  
+  </div>
+  </div>
+</center>
+<!--Conversation section---------------------------------------------------------->
+
+
+<!-- section WWO----------------------------------------------------------------->
+ <div class="heading col-lg-12 col-md-12 col-sm-12 text-center mt-5 ">
+  <h1 style="font-size: 50px; color: darkgreen;">What We Offer</h1>
+  </div>
+<center>
+<div class="row row-cols-1 row-cols-md-3 mt-2 mb-5">
+  <a href="WhatWeOffer/What_We_Offer.html">
+    <div class="col">
+    <div class="card cardbg">
+        <img src="assest/Home_Imges/Education_card.JPG" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h2 class="card-title1 card-title">Education</h2>
+      </div>
+    </div>
+  </div>
+</a>
+<a href="WhatWeOffer/What_We_Offer.html">
+  <div class="col">
+    <div class="card cardbg">
+      <img src="assest/Home_Imges/Recreation_Card.JPG" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h2 class="card-title2 card-title">Recreation</h2>
+      </div>
+    </div>
+  </div>
+</a>
+<a href="WhatWeOffer/What_We_Offer.html">
+  <div class="col">
+    <div class="card cardbg">
+        <img src="assest/Home_Imges/Breading_card.JPG" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h2 class="card-title3 card-title">Breading</h2>
+      </div>
+    </div>
+  </div>
+  </a>
+</div>
+ </center>
+<!-- section  WWO------------------------------------------------------------------>
+
+
+<!-- section  Slider------------------------------------------------------------------>
+ <div class="heading col-lg-12 col-md-12 col-sm-12 text-center mt-5 mb-0">
+<h1 style="font-size: 50px; color: darkgreen;"></h1>
+</div>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assest/Home_Imges/Slider_3.jpg" class="d-block w-100" style="height: 700px;" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="assest/Home_Imges/Slider_1.jpg" class="d-block w-100" style="height: 700px;" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="assest/Home_Imges/Slider_2.png" class="d-block w-100" style="height: 700px;" alt="...">
+    </div>
+  </div>
+</div>
+<!-- section  Slider------------------------------------------------------------------>
+
+
+<!-- section  Explore--------------------------------------------------------------->
+<div class="heading col-lg-12 col-md-12 col-sm-12 text-center mt-0 mb-5">
+  <h1 style="font-size: 50px; color: darkgreen;"></h1>
+  </div>
+<section id="Explore" class="ms-4 " >
+  <div class="Explore-section">
+    <div class="container">
+      <div class="row align-items-center ">
+        <div class="col-lg-12 col-md-12 text-sec-exp mb-0 ">
+          <h2 style="font-size: 80px;">Our Animals & Resources</h2>
+          <p>Central Zoo is a great environment for our animals – it provides, not only, a haven for our collection of over one hundred different species including Steve’s favourites the crocodile, tiger and cheetah, but is also a great platform for those same animals to act as ambassadors for their cousins in the wild.</p>
+        </div>
+        
+      </div>    
+    </div>
+  </div>
+  <div class="Explore-section">
+    <div class="container mb-5 ">
+      <div class="row align-items-center ">
+        <div class="col-lg-6 col-md-12 text-sec-exp mb-0 ">
+          <div class="card border-0 mb-4 ms-0">
+          <a href="Animal/Animal_Page.html">
+          <img src="assest/Home_Imges/animal.jpg" class="img-fluid e-card" alt="">
+          </a>
+        </div>
+        </div>
+        <div class="col-lg-6 col-md-12 mb-lg-0">
+          <div class="card border-0 mb-4 ms-0">
+            <a href="Birds/Bird_Pages.html">
+            <img src="assest/Home_Imges/Bird.jpg" class="img-fluid e-card" alt="">
+            </a>
+          </div>
+        </dIv>
+      </div>    
+    </div>
+  </div> 
+</section>
+<!-- section  Explore--------------------------------------------------------------->
+
+
+<!-- Swiper-------------------------------------------------------------->
+
+ <!-- Swiper -->
+ <div class="swiper mt-5" style="justify-content: end;">
+ <a  href="Live_camara/Live_Camara_Page.html" class="SEE-MORE" style="text-align: right; margin-top: 20PX; text-decoration: none;"><H2 class="SEE-MORE" style=" margin-right: 20PX; margin-top: 25PX;">SEE MORE LIVE IMAGES ></H2></a> 
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="assest/Home_Imges/S1.jpg" class=" img-fluid swiper-img" style="border-radius: 40px; margin-top: 20PX;"></div>
+    <div class="swiper-slide"><img src="assest/Home_Imges/S2.jpg" class=" img-fluid swiper-img" style="border-radius: 40px; margin-top: 20PX;"></div>
+    <div class="swiper-slide"><img src="assest/Home_Imges/S3.jpg" class=" img-fluid swiper-img" style="border-radius: 40px; margin-top: 20PX;"></div>
+    <div class="swiper-slide"><img src="assest/Home_Imges/S4.jpg" class=" img-fluid swiper-img" style="border-radius: 40px; margin-top: 20PX;"></div>
+    <div class="swiper-slide"><img src="assest/Home_Imges/S5.jpg" class=" img-fluid swiper-img" style="border-radius: 40px; margin-top: 20PX;"></div>
+    <div class="swiper-slide"><img src="assest/Home_Imges/S6.jpg" class=" img-fluid swiper-img" style="border-radius: 40px; margin-top: 20PX;"></div>
+    <div class="swiper-slide"><img src="assest/Home_Imges/S7.jpg" class=" img-fluid swiper-img" style="border-radius: 40px; margin-top: 20PX;"></div>
+    <div class="swiper-slide"><img src="assest/Home_Imges/S8.jpg" class=" img-fluid swiper-img" style="border-radius: 40px; margin-top: 20PX;"></div>
+  </div>
+  <div class="swiper-button-next" style="color:yellow;"></div>
+  <div class="swiper-button-prev"  style="color:yellow;"></div>
+</div>
+
+ <!-- Swiper--------------------------------------------------------------> 
+
+ <!-- Feedback_________________________________ -->
+ <div class="container mt-5 pt-2 pb-3" style="background-color: #ffffff;  box-shadow: 0 2px 6px 0 #6c7d72, 0 2px 8px 0 #ccd7d5;">
+    <h2 style="text-align: center;">Feedback</h2>
+  <div class="row">
+    <div class="col-lg-5" style="padding-left: 90px;">
+      <img src="assest/Home_Imges/FEEDBACK.png" style="margin-top: -60px;" class="img-fluid"alt="">
+    </div>
+    <div class="col-lg-6 pt-2 pb-0 ms-5" >
+      <form>
+        <div>
+          <p style="font-size: 15px; margin-top: 15px;">Is this first time you have visited the website?</p>
+          <input type="radio" id="yes" name="type" value="Yes">
+          <label for="yes">Yes</label> <br>
+          <input type="radio" id="No" name="type" value="No">
+          <label for="yes">No</label> 
+        </div>
+        <div class="input-group mt-2">
+          <input type="text" aria-label="Full Name" class="form-control" placeholder="Full Name" style="background-color: transparent; border-radius: 05px; box-shadow: 0 1px 4px 0 #707a74, 0 2px 10px 0 #ccd7d5;">
+        </div>
+        <div class="input-group mt-3">
+          <input type="email" aria-label="Full Name" class="form-control" placeholder=" Email:-abc123@gmail.com" style="background-color: transparent; border-radius: 05px; box-shadow: 0 1px 4px 0 #606b65, 0 2px 10px 0 #ccd7d5; ">
+        </div>
+        <div class="mb-3 mt-3">
+          <textarea class="form-control" id="message-text" placeholder="Message Type Heare: " style=" height: 100px; background-color: transparent; border-radius: 05px; box-shadow: 0 1px 4px 0 #5a655e, 0 2px 10px 0 #ccd7d5;"></textarea>
+        </div>
+        <div class="modal-footer " >
+          <button type="button" class="btn " style="width: 150px;"  id="liveAlertBtn">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+ </div>
+ <!-- Feedback_________________________________ -->
+
+
+ <!-- Footer-------------------------------------------------------------->
+ <section id="footer" >
+  <div class="heading col-lg-12 col-md-12 col-sm-12 text-center mt-3">
+    <h1 style="font-size: 30px; color: darkgreen; margin-bottom: -50px;" >Follow Us</h1>
+    </div>
+    <div class="heading col-lg-12 col-md-12 col-sm-12 text-center mt-3 mb-0">
+      <div class="socialmedia">
+        <a href="#" alt="fblink"> <img src="assest/Home_Imges/facebook.png" class="smicon" alt="facebook"></a>
+        <a href="#" alt="instalink"><img src="assest/Home_Imges/tiktok.png" class="smicon" alt="instagram"></a>
+         <a href="#" alt="twitter"></a><img src="assest/Home_Imges/twitter.png" class="smicon" alt="tiktok"></a>
+         <a href="#" alt="ytlink"></a><img src="assest/Home_Imges/youtube.png" class="smicon" alt="youtube"></a>
+         <a href="#" alt="twlink"></a><img src="assest/Home_Imges/instagram.png" class="smicon" alt="twitter"></a>
+       </div>
+      </div>
+    <div class="footer-section wrapper"  style="margin-top: -15px;">
+      <div class="container">
+        <div class="row text-center mt-5">
+          <div class="col-lg-5 col-md-12 mb-lg-0 mb-0">
+            <div class=" border-0" style="background-color: transparent;">
+              <img src="assest/Home_Imges/zlogo1.png" class="footerlogo" alt="foterlogo">
+            </div>
+          </dIv>
+          <div class="col-lg-7 col-md-12 text-sec ms-0 mt-5">
+              <div class="footer-link">
+              <a class="footerlink" href="index.html">Home</a>
+              <a class="footerlink" data-bs-toggle="modal" data-bs-target="#Feedback" type="button" href="">Feedback</a>
+              <a class="footerlink" href="Policy/Policy.html">Policy</a>
+              <a class="footerlink" href="About/About_page.html">About_Us</a>
+              <a class="footerlink" href="Contact_US/Contect_Page.html">Contect_Us</a>
+              <a class="footerlink" href="Live_camara/Live_Camara_Page.html">Live_Camaras</a>
+              <a class="footerlink" href="Zoo_map/Zoo_Map_Page.html">Zoo_Map</a>
+              <a class="footerlink" href="Animal/Animal_Page.html">Animals</a>
+              <a class="footerlink" href="Birds/Bird_Pages.html">Birds</a>
+              <a class="footerlink" href="WhatWeOffer/What_We_Offer.html">What_We_Offer</a>              
+            </div>
+            <div class="footer-link mt-5">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.3141351305!2d67.14924461169304!3d24.887264277819646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb339999415e0c3%3A0x36742eee0fd9c291!2sAptech%20Metro%20Star%20Gate!5e0!3m2!1sen!2s!4v1717855386075!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>    
+      </div>
+    </div>  
+    <div class="heading col-lg-12 col-md-12 col-sm-12 text-center pb-2 footer-section2">
+      <p style="text-align: center; font-size: 23px; font-size:15px; color: burlywood;">Zoological Society of Karachi is incorporated by Aptech-MSG <br>with Company Number ACP000000. Registered Charity in Pakistan number 000000. Registered address:<br>Shah Faisal Colony Flyover, Faisal Cantonment, Karachi, Karachi City, Sindh, Pakistan</p>
+      </div>
+  </section>
+ <!-- Footer-------------------------------------------------------------->
+  
+<!-- Feedback Modal_________________________ -->
+ <div class="modal fade" style="background-color: rgba(250, 250, 250, 0.6);" id="Feedback" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background-color:rgb(222, 184, 135, 0.8); box-shadow: 0 2px 6px 0 #6c7d72, 0 2px 8px 0 #ccd7d5; ">
+      <div class="modal-header" style="border: none;">
+        <h2 class="modal-title fs-5 text-center" id="exampleModalLabel">Feedback Or FQA</h2>  
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div>
+        <div id="liveAlertPlaceholder">
+        </div>
+      </div>
+      <div class="modal-body" >
+        <form>
+            <div class="input-group">
+              <input type="text" aria-label="Full Name" class="form-control" placeholder="Full Name" style="background-color: transparent; border-radius: 0%; border-top: none; border-left:none; border-right: none;">
+            </div>
+            <div class="input-group mt-3">
+              <input type="email" aria-label="Full Name" class="form-control" placeholder=" Email:-abc123@gmail.com" style="background-color: transparent; border-radius: 0%; border-top: none; border-left:none; border-right: none;">
+            </div>
+            <div>
+           <p style="font-size: 15px; margin-top: 25px;">Is this first time you have visited the website?</p>
+           <input type="radio" id="yes" name="type" value="Yes">
+           <label for="yes">Yes</label> <br>
+           <input type="radio" id="No" name="type" value="No">
+           <label for="yes">No</label> 
+          </div>
+            <div class="mb-3 mt-3">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text" placeholder="Message Type Heare: " style=" height: 200px; background-color: transparent; border-radius: 0%;  border-left:none; border-right: none; border-bottom: none;"></textarea>
+            </div>
+          </form>
+      </div>
+        <div class="modal-footer">
+          <button type="button" class="btn " data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn " id="liveAlertBtn">Send</button>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- Feedback Modal_________________________ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- links--------------------------------------------------------------->
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script class="SWIPER-JS">
+  var swiper = new Swiper('.swiper', {
+    slidesPerView: 3,
+    direction: getDirection(),
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on: {
+      resize: function () {
+        swiper.changeDirection(getDirection());
+      },
+    },
+  });
+
+  function getDirection() {
+    var windowWidth = window.innerWidth;
+    var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+    return direction;
+  }
+</script>
+
+<!-- links--------------------------------------------------------------->
+
+
+ </body>
 </html>

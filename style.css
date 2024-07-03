@@ -1,0 +1,443 @@
+/* Gernal CSS-------------------------------------------------------------------------------------- */
+*{
+        padding: 0;
+}
+body{
+    background-color: rgb(235, 245, 240) ;
+}
+:hover,
+:focus,
+button{
+        text-decoration: none;
+        outline: 0;
+}
+h1{
+    font-size: 90PX;
+    font-family:Fantasy;
+    color:#7DD855;
+    font-weight: 100;
+    word-spacing: 0px;
+    letter-spacing: 0.5px;
+}
+h2{
+    font-size: 40px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #1D5A36;
+    word-spacing: 0px;
+    letter-spacing: -2px;
+}
+h3{
+   font-family:Fantasy;
+   font-size:25px;
+    color:rgb(255, 255, 255);
+    font-weight: 500;
+    text-align:center; 
+
+}
+h4{
+    font-family:sans-serif;
+    font-size:15px;
+    color:rgb(255, 255, 255);
+    font-weight: 500;
+    text-align: center; 
+}
+p{
+    font-family:sans-serif;
+    font-size:20px;
+    color:#0F352B;
+    font-weight: 500;
+    text-align: justify;
+}
+.heading{
+    padding-bottom: -3rem;
+   padding-top:  40PX;
+}
+a{
+    text-decoration: none;
+}
+/* Gernal CSS-------------------------------------------------------------------------------------- */
+
+/* Screolbar  start-------------------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: #82D756;
+
+}
+::-webkit-scrollbar-thumb{
+    background-color: #143204;
+    border: #7DD855 solid 1px;
+}
+/* scrolbar End -------------------------------------------------------------------------------------------*/
+
+/* Navbar Start------------------------------------------------------------------------------------------- */
+.navbar{
+    background-color: rgba(9, 46, 25, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 #0F352B, 0 0px 10px 0 #0F352B;
+    text-align:center; 
+}
+.navbar-brand{
+    width: 145px;
+    height: 65px;
+    margin-top: -2px;
+}
+.main-btn{
+    height: 45px;
+    width: auto;
+    border:none;
+    color:#7DD855;
+    background-color:#ffffff;
+    border-radius: 10px;
+    font-family: cursive;
+    font-weight: 500;
+    font-size: 20px;
+    padding:8.5px 13px;
+    text-decoration:none;
+    transition: 1s background-color;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+} 
+.main-btn:hover{
+    background-color:#7DD855;
+    color:#ffffff;
+    box-shadow: #143204 2px;
+    transition-duration: 1s;
+} 
+.nav-link{
+    color:#7DD855;
+    font-weight: 500;
+    font-family:cursive;
+    position: relative;
+}
+.nav-link:hover{
+    color: #ffffff;
+}
+.nav-link:hover, .nav-link.active{
+    color: #ffffff;
+}
+.nav-link::before{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    visibility: hidden;
+    transition: all 0.1s ease-in-out;
+}
+.nav-link:hover::before, .nav-link.active::before{
+    width: 100%;
+    visibility: visible;
+}
+.dropdown-menu{
+    background-color: rgba(250, 250, 250, 0.6);
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #0F352B;
+}
+.dropdown-text{
+    color: #143204;
+    font-weight: 700;
+    font-family:cursive;
+}
+.dropdown-text:hover{
+    color:#ffffff;
+    background-color: transparent;
+}
+.sidebar{
+        background-color:rgba(9, 46, 25, 0.5);
+        backdrop-filter: blur(5px); 
+}
+/* Navbar Ent-------------------------------------------------------------------------------------------------------- */
+
+/* .modal-content{
+    background-color:burlywood ;
+} */
+
+
+/* Bannar Start------------------------------------------------------------------------------------------------------ */
+.top-bannar{
+    width: 100%;
+    min-height: 110vh;
+    background: url(assest/Home_Imges/Banner_img.jpeg) no-repeat;
+    background-size: cover;
+    /* padding:16.785rem 0 0.375rem; */
+    margin-top: 0px;
+
+}
+.banner-shadow{
+    min-height:120vh;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.1);
+    transition: all 1s ease-out;
+    /* margin-top: -270px; */
+ padding:12.600rem 0 0rem;
+}
+.btn{
+    text-decoration: none;
+    /* border: 0.3px solid #0F352B; */
+    color:#0F352B;
+    background-color: transparent;
+    border-radius: 5px;
+    font-family: fantasy;
+    font-weight: 100;
+    font-size: 20px; 
+    transition: all 0.6s ease-out; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center; 
+}  
+.btn:hover{
+    text-decoration: none;
+    /* border:0.5px, solid, #7DD855; */
+    color:#7DD855;
+    background-color:  #0F352B;
+    border-radius: 5px;
+    font-family: fantasy;
+    font-weight: 100;
+    font-size: 20px;
+    transition: all 0.3S ease-in-out;
+    transition-duration: 1s;  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;   
+}
+.btn1{
+
+    text-decoration: none;
+    /* border: 0.3px solid #7DD855; */
+    color:#0F352B;
+    background-color: transparent;
+    border-radius: 5px;
+    font-family: fantasy;
+    font-weight: 100;
+    font-size: 20px; 
+    transition: all 0.6s ease-out; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 100px 0 rgba(0, 0, 0, 0.19);
+    text-align: center; 
+}
+/* Bannar Start------------------------------------------------------------------------------------------------------ */
+
+/* Counter section -------------------------------------------------------------------------------------------------*/
+.counter-section{
+    justify-content: center;
+    align-items: end;
+    background-color:#DEB887;
+    padding: 1rem 0;
+    width: 80%;
+    margin-top: -180px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 #9bada2, 0 5px 10px 0 #ccd7d5;
+    text-align:center;
+}
+.counter-section h1{
+    color: #7DD855;
+    font-size: 40px; 
+}
+/* Counter section -------------------------------------------------------------------------------------------------*/
+
+/* about section--------------------------------------------------------------------------------------------------- */
+.about-section{
+    background-color: #7DD855;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.about-section .card,
+.about-section .card img{
+    border-radius: 1.625rem;
+}
+.wrapper{
+    padding-top: 2.25rem;
+    padding-bottom: 3.25rem;
+}
+.aboutimg{
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 #0F352B, 0px 0px 25px 0#D8F8A6;
+    text-align: center; 
+    
+}
+.divider-line{
+    border-bottom: #7DD855 2px solid;
+    width:  100%;
+    margin: 0 0;
+}
+.about2{
+    box-shadow: 0 4px 8px 0 #9bada2, 0 5px 10px 0 #ccd7d5;
+    text-align:center;
+    background-color: burlywood;
+}
+/* about section--------------------------------------------------------------------------------------------------- */
+
+/*conversation section--------------------------------------------------------------------------------------------------- */
+.conversation{
+        justify-content: center;
+        width: 98%;
+        height: 900px;
+        border-radius: 30px;
+        background: url(assest/Home_Imges/Conversation_img.png) no-repeat center;
+        background-size:cover;
+        padding-top: 150px;
+            
+}
+/*conversation section--------------------------------------------------------------*/
+
+/* Card section------------------------------------------------------------- */
+.row{
+    width: 100%;
+}
+.cardbg{
+        background: #1D5A36;
+        border: none;
+        box-shadow: 0 4px 8px 0 #0F352B, 0px 0px 0px 0 #0F352B;
+        text-align: center; 
+        margin-top: 155px;
+        width:250px;
+}
+.card-img-top{
+        border-radius: 500px;
+        margin-top: -120px;
+        box-shadow: 0 0px 0px 0 #0F352B, 0px -3px 15px 2px #0F352B;
+        text-align: center;
+}
+.card-title:hover{
+        color: #ffffff;
+}
+.card-title1{
+    color: #F18F20;
+}
+.card-title2{
+    color: #D4DE25;
+}
+.card-title3{
+    color: #F9A960;
+}
+/* Card section----------------------------------------------------------------------- */
+
+/*Card section-------------------------------------------------------------------------------- */
+.e-card{
+    transition: all 0.5s ease-out;
+}
+.e-card:hover{
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 #0F352B, 0px 0px 10px 0 #0F352B;
+    text-align: center; 
+    transition: all 0.5s ease-in; 
+    
+}
+/*Card section--------------------------------------------------------------*/
+
+/* swiper Animal Slider------------------------------------------------------- */
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+.swiper {
+    margin-top: -10;
+  width: 100%;
+  height: 60%;
+  background-color:burlywood;
+  display: flex;
+  flex-direction: row;
+  margin-top: -20PX;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color:burlywood;
+  
+}
+@media (max-width: 760px) {
+  .swiper-button-next {
+    right: 20px;
+    transform: rotate(90deg);
+  }
+
+  .swiper-button-prev {
+    left: 20px;
+    transform: rotate(90deg);
+  }
+}
+.SEE-MORE:hover{
+    color: #ffffff;
+}
+
+.swiper-img{
+    border-radius: 20px; 
+    margin-top: 20PX;
+
+}
+/* swiper Animal Slider------------------------------------------------------- */
+
+/* Footer------------------------- */
+.footer-section{
+    top: 13000PX;
+    width: 100%;
+    background-color: #1D5B36;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 4px 8px 0 #0F352B, 0 -5px 10px 0 #0F352B;
+    
+}
+.footer-section2{
+    width: 100%;
+    background-color: #1D5B36;
+}
+.footerlogo{
+   
+    height: 300PX;
+    width: 400PX;
+    border-bottom: #7DD855 solid 2px;
+}
+.smicon{
+    height: 50px;
+    width: 50px;
+}
+.footer-link{
+    justify-content: center;
+    text-align: center;
+    word-spacing: 30px;
+}
+.footerlink{
+    text-decoration: none;
+    color:#ffffff;
+    font-weight: 500;
+    font-family:cursive;
+}
+.footerlink:hover{
+    color:#7DD855;
+    transition: all 0.5s ease-in-out;
+}
+iframe{
+   height: 200px;
+    
+    border-radius: 10%;
+
+   
+}
+/* Footer------------------------- */
+
+/* HOME END_______________________________________________________________________________________________________________________________________________________________________________________ */
+

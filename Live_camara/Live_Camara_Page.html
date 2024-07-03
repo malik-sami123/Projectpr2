@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="icon" href="../assest/Home_Imges/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery Central Zoo</title>
+<!-- Link Section-------------------------------------- -->
+
+    <!-- Bootstrap CDN CSS--------------------------------------------------- -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap CDN JS--->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Bootstrap CDN End-------------------------------------------------- -->
+
+    <!-- CSS LINK--------------------------------------------------------- -->
+    <link href="../style.css" rel="stylesheet">
+    <link href="LCStyle.css" rel="stylesheet">
+    <!-- CSS LINK--------------------------------------------------------- -->
+
+<!-- Swiper CDN________ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- animate.css CDN________ -->    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<!--AoS Animation CDN________-->  
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  
+
+<!-- AOS Animate -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- Link Section-------------------------------------- -->    
+</head>
+  <body>
+
+<!-- Navbar Section ------------------------------------------------------ -->
+<section class="navebar-section">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top mt-3 mx-5 px-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"><img src="../assest/Home_Imges/zlogo1.png" class="navbar-brand" alt=""></a>
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header text-white border-bottom">
+          <img src="../assest/Home_Imges/zlogo1.png" class="navbar-brand" alt="">
+          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column flex-lg-row">
+          <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-1">
+            <li class="nav-item mx-1">
+              <a class="nav-link" href="../WhatWeOffer/What_We_Offer.html">What We Offer</a>
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link active" href="../Live_camara/Live_Camara_Page.html">Gallery</a>
+            </li>
+            <li class="nav-item dropdown mx-1">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../About/About_page.html">About Us</a></li>
+                <li><a class="dropdown-item" href="../Contact_US/Contect_Page.html">Contect Us</a></li>
+                <li><a class="dropdown-item" href="../Zoo_map/Zoo_Map_Page.html">Zoo Map</a></li>
+                <li><a class="dropdown-item" href="../Policy/Policy.html">Policy</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown mx-1">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Explore
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="../Animal/Animal_Page.html">Animals</a></li>
+                <li><a class="dropdown-item" href="../Birds/Bird_Pages.html">Birds</a></li>
+               
+              </ul>
+            </li>
+          </ul>
+          <div class=" d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+         <a  href="" class="main-btn"data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">Book Ticket</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </nav> 
+</section>
+<!-- Navbar Section ------------------------------------------------------ -->
+
+<!-- Modal form-------------------------------------------------------------->
+ <div class="modal flip-left" style="background-color: rgba(250, 250, 250, 0.6);" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5 text-center" id="exampleModalLabel">Book A Ticket</h2>  
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div>
+        <div id="liveAlertPlaceholder">
+        </div>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="input-group">
+              <input type="text" aria-label="Full Name" class="form-control" placeholder="Full Name">
+            </div>
+            <div class="input-group mt-3">
+              <input type="text" aria-label="Full Name" class="form-control" placeholder="CNIC Number">
+            </div>
+            
+            <div class="input-group mt-3">
+              <input type="text" aria-label="Full Name" class="form-control" placeholder="Contact Number">
+            </div>
+            <div class="input-group mb-3 mt-3">
+              <select class="form-select" id="inputGroupSelect01">
+                <option value="1">Select Gender</option>
+                <option value="2">Male</option>
+                <option value="3">Female</option>
+                <option value="4">Custom</option>
+              </select>
+            </div>
+            <div class="input-group mb-3 mt-3">
+              <select class="form-select" id="inputGroupSelect01">
+                <option value="1">Select Event</option>
+                <option value="2">Panda Talk</option>
+                <option value="3">Day Ticket</option>
+                <option value="4">Night Ticket</option>
+                <option value="5">Annual Pasess</option>
+                <option value="6">Tours And Experiance</option>
+                <option value="7">Animal Experiance</option>
+              </select>
+            </div>
+            <div class="input-group mt-3">
+              <label class="mt-2">Booking Date</label><br>
+              <input type="date" aria-label="Full Name" class="form-control text-uppercase" placeholder="Appointment Date">
+            </div>
+            <div class="input-group mt-3">
+              <input type="email" aria-label="Full Name" class="form-control" placeholder="E-mail (123abc@gmail.com)">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Important Note:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+      </div>
+        <div class="modal-footer">
+          <button type="button" class="btn " data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn " id="liveAlertBtn">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Modal form--------------------------------------------------------------> 
+ 
+<!-- section 2 Bannar----------------------------------------------------- -->
+<section id="home" style="margin-top: 150px;">
+  <div class="ps-0 top-bannar-map">
+    <div class="Container banner-shadow-map" >
+      <div class="row mx-0 banner-text">
+         <div  class="col-lg-5 col-md-12 ms-lg-5 ms-sm-0 animate__animated animate__backInLeft">
+            <h1 class="tophead"style="letter-spacing: 5px; font-size:80px; ">Live Camera</h1><br>
+            <h2 style="color:#ffffff; margin-top: -40px; letter-spacing: -2px;">CENTRAL ZOO</h2>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+</section>
+<!-- section 2 Bannar----------------------------------------------------- -->
+
+
+<div class="heading  col-lg-12 col-md-12 col-sm-12 text-center mb-5 pt-3" >
+  <h2 style="font-size: 80px; font-family: Candara Light; font-weight: 100;">Central Zoo Live Camera</h2>
+</div>
+<!-- img____________________________ -->
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-4 g-2">
+    <div class="col">
+      <div class="card h-100 animal_card" data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G1.jpg" class="card-img" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G2.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G3.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G4.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G5.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G6.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G7.jpg" class="card-img" alt="...">
+      </div>
+    </div>     
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G8.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G9.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G10.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G11.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G12.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G13.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G14.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G15.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G16.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G17.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G18.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G19.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G20.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G21.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G22.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G23.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G24.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G25.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G26.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G27.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G28.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G29.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">  
+        <img src="../assest/Gallery/G30.jpg" class="card-img" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G31.jpg" class="card-img" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G32.jpg" class="card-img" alt="...">
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G33.jpg" class="card-img" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G34.jpg" class="card-img" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G35.jpg" class="card-img" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G36.jpg" class="card-img" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G37.jpg" class="card-img" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G38.jpg" class="card-img" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G39.jpg" class="card-img" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 animal_card"data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000">
+        <img src="../assest/Gallery/G40.jpg" class="card-img" alt="...">
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- img____________________________ -->  
+
+
+ <!-- Footer-------------------------------------------------------------->
+ <section id="footer" >
+  <div class="heading col-lg-12 col-md-12 col-sm-12 text-center mt-3">
+    <h1 style="font-size: 30px; color: darkgreen; margin-bottom: -50px;" >Follow Us</h1>
+    </div>
+    <div class="heading col-lg-12 col-md-12 col-sm-12 text-center mt-3 mb-0">
+      <div class="socialmedia">
+        <a href="#" alt="fblink"> <img src="../assest/Home_Imges/facebook.png" class="smicon" alt="facebook"></a>
+        <a href="#" alt="instalink"><img src="../assest/Home_Imges/tiktok.png" class="smicon" alt="instagram"></a>
+         <a href="#" alt="twitter"></a><img src="../assest/Home_Imges/twitter.png" class="smicon" alt="tiktok"></a>
+         <a href="#" alt="ytlink"></a><img src="../assest/Home_Imges/youtube.png" class="smicon" alt="youtube"></a>
+         <a href="#" alt="twlink"></a><img src="../assest/Home_Imges/instagram.png" class="smicon" alt="twitter"></a>
+       </div>
+      </div>
+    <div class="footer-section wrapper"  style="margin-top: -15px;">
+      <div class="container">
+        <div class="row text-center mt-5">
+          <div class="col-lg-5 col-md-12 mb-lg-0 mb-0">
+            <div class=" border-0" style="background-color: transparent;">
+              <img src="../assest/Home_Imges/zlogo1.png" class="footerlogo" alt="foterlogo">
+            </div>
+          </dIv>
+          <div class="col-lg-7 col-md-12 text-sec ms-0 mt-5">
+              <div class="footer-link">
+              <a class="footerlink" href="../index.html">Home</a>
+              <a class="footerlink" data-bs-toggle="modal" data-bs-target="#Feedback" type="button" href="">Feedback</a>
+              <a class="footerlink" href="../Policy/Policy.html">Policy</a>
+              <a class="footerlink" href="../About/About_page.html">About_Us</a>
+              <a class="footerlink" href="../Contact_US/Contect_Page.html">Contect_Us</a>
+              <a class="footerlink" href="../Live_camara/Live_Camara_Page.html">Live_Camaras</a>
+              <a class="footerlink" href="../Zoo_map/Zoo_Map_Page.html">Zoo_Map</a>
+              <a class="footerlink" href="../Animal/Animal_Page.html">Animals</a>
+              <a class="footerlink" href="../Birds/Bird_Pages.html">Birds</a>
+              <a class="footerlink" href="../WhatWeOffer/What_We_Offer.html">What_We_Offer</a>              
+            </div>
+            <div class="footer-link mt-5">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.3141351305!2d67.14924461169304!3d24.887264277819646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb339999415e0c3%3A0x36742eee0fd9c291!2sAptech%20Metro%20Star%20Gate!5e0!3m2!1sen!2s!4v1717855386075!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>    
+      </div>
+    </div>  
+    <div class="heading col-lg-12 col-md-12 col-sm-12 text-center pb-2 footer-section2">
+      <p style="text-align: center; font-size: 23px; font-size:15px; color: burlywood;">Zoological Society of Karachi is incorporated by Aptech-MSG <br>with Company Number ACP000000. Registered Charity in Pakistan number 000000. Registered address:<br>Shah Faisal Colony Flyover, Faisal Cantonment, Karachi, Karachi City, Sindh, Pakistan</p>
+      </div>
+</section>
+   <!-- Footer-------------------------------------------------------------->
+  
+   <!-- Feedback Modal_________________________ -->
+ <div class="modal fade" style="background-color: rgba(250, 250, 250, 0.6);" id="Feedback" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="background-color:rgb(222, 184, 135, 0.8); box-shadow: 0 2px 6px 0 #6c7d72, 0 2px 8px 0 #ccd7d5; ">
+      <div class="modal-header" style="border: none;">
+        <h2 class="modal-title fs-5 text-center" id="exampleModalLabel">Feedback Or FQA</h2>  
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div>
+        <div id="liveAlertPlaceholder">
+        </div>
+      </div>
+      <div class="modal-body" >
+        <form>
+            <div class="input-group">
+              <input type="text" aria-label="Full Name" class="form-control" placeholder="Full Name" style="background-color: transparent; border-radius: 0%; border-top: none; border-left:none; border-right: none;">
+            </div>
+            <div class="input-group mt-3">
+              <input type="email" aria-label="Full Name" class="form-control" placeholder=" Email:-abc123@gmail.com" style="background-color: transparent; border-radius: 0%; border-top: none; border-left:none; border-right: none;">
+            </div>
+            <div>
+           <p style="font-size: 15px; margin-top: 25px;">Is this first time you have visited the website?</p>
+           <input type="radio" id="yes" name="type" value="Yes">
+           <label for="yes">Yes</label> <br>
+           <input type="radio" id="No" name="type" value="No">
+           <label for="yes">No</label> 
+          </div>
+            <div class="mb-3 mt-3">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text" placeholder="Message Type Heare: " style=" height: 200px; background-color: transparent; border-radius: 0%;  border-left:none; border-right: none; border-bottom: none;"></textarea>
+            </div>
+          </form>
+      </div>
+        <div class="modal-footer">
+          <button type="button" class="btn " data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn " id="liveAlertBtn">Send</button>
+        </div>
+    </div>
+  </div>
+</div>
+
+   <script>
+    AOS.init();
+  </script> 
+  <!-- links--------------------------------------------------------------->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assest/JaveScript_File/Swiper.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- links--------------------------------------------------------------->
+    
+  
+    </body>
+  </html>   
